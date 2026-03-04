@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TechFlow Login</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            display: flex;
+            width: 100%;
+            height: 100vh;
+        }
+
+
+        .vertical-brand {
+            width: 30%;
+            background-color: black;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .vertical-brand h1 {
+            font-size: 40px;
+            margin: 0;
+        }
+
+        .vertical-brand p {
+            margin-top: 20px;
+            font-size: 18px;
+            opacity: 0.8;
+        }
+
+
+        .form-area {
+            width: 60%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: white;
+        }
+
+        .form-container {
+            width: 350px;
+        }
+
+        .tabs-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .tab-button {
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            border: 1px solid silver;
+            border-radius: 5px;
+            margin: 5px;
+        }
+
+        .tab-button.active {
+            background-color: black;
+            color: white;
+        }
+
+        .form-box {
+            display: none;
+        }
+
+        .form-box.active {
+            display: block;
+        }
+
+        .form-box input,
+        .form-box select {
+            padding: 10px;
+            width: 100%;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid silver;
+            box-sizing: border-box;
+        }
+
+        .form-box button {
+            padding: 10px;
+            width: 100%;
+            background-color: black;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .form-box button:hover {
+            background-color: gray;
+        }
+    </style>
+
+</head>
+<body>
+
+<div class="container">
+
+
+    <div class="vertical-brand">
+        <h1>TechFlow</h1>
+        <p>Login </p>
+		<P>Registration Portal</p>
+    </div>
+
+
+    <div class="form-area">
+        <div class="form-container">
+
+            <div class="tabs-header">
+                <button class="tab-button active" onclick="showLogin()">Login</button>
+                <button class="tab-button" onclick="showRegister()">Register</button>
+            </div>
+
+            <div class="form-box active" id="loginForm">
+                <input type="email" placeholder="Email">
+                <input type="password" placeholder="Password">
+                <button>Login</button>
+            </div>
+
+            <div class="form-box" id="registerForm">
+                <input type="text" placeholder="Full Name">
+                <input type="email" placeholder="Email">
+                <input type="password" placeholder="Password">
+                <select>
+                    <option>Select Role</option>
+                    <option>User</option>
+                    <option>Admin</option>
+                </select>
+                <button>Register</button>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
